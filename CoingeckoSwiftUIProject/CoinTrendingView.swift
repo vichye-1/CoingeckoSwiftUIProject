@@ -24,6 +24,7 @@ struct CoinTrendingView: View {
                 .scrollIndicators(.hidden)
                 
                 sectionTitle("Top15 Coin")
+                
                 sectionTitle("Top7 NFT")
             }
         }
@@ -65,10 +66,11 @@ struct CoinTrendingView: View {
                          Spacer()
                          
                          VStack {
-                             Text("111324234")
-                             Text("131432423")
+                             Text("₩12,123,123")
+                                 .frame(maxWidth: .infinity, alignment: .leading)
+                             Text("+0.64%")
+                                 .frame(maxWidth: .infinity, alignment: .leading)
                          }
-                         .frame(maxWidth: .infinity, alignment: .leading)
                          .padding()
                          
                      }

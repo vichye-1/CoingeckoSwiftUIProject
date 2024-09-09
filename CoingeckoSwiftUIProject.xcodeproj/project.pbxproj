@@ -11,6 +11,7 @@
 		EFE521492C8B238A004ED9E0 /* CoinTrendingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE521482C8B238A004ED9E0 /* CoinTrendingView.swift */; };
 		EFE5214B2C8B238B004ED9E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFE5214A2C8B238B004ED9E0 /* Assets.xcassets */; };
 		EFE5214E2C8B238B004ED9E0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFE5214D2C8B238B004ED9E0 /* Preview Assets.xcassets */; };
+		EFE521642C8F3337004ED9E0 /* Top15CoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE521632C8F3337004ED9E0 /* Top15CoinView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		EFE521482C8B238A004ED9E0 /* CoinTrendingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinTrendingView.swift; sourceTree = "<group>"; };
 		EFE5214A2C8B238B004ED9E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EFE5214D2C8B238B004ED9E0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EFE521632C8F3337004ED9E0 /* Top15CoinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Top15CoinView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 				EFE521482C8B238A004ED9E0 /* CoinTrendingView.swift */,
 				EFE5214A2C8B238B004ED9E0 /* Assets.xcassets */,
 				EFE5214C2C8B238B004ED9E0 /* Preview Content */,
+				EFE521632C8F3337004ED9E0 /* Top15CoinView.swift */,
 			);
 			path = CoingeckoSwiftUIProject;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			files = (
 				EFE521492C8B238A004ED9E0 /* CoinTrendingView.swift in Sources */,
 				EFE521472C8B238A004ED9E0 /* CoingeckoSwiftUIProjectApp.swift in Sources */,
+				EFE521642C8F3337004ED9E0 /* Top15CoinView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

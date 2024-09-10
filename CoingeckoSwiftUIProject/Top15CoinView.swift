@@ -19,32 +19,55 @@ struct CoinData: Identifiable {
 
 struct Top15CoinView: View {
     
+    let rows = [GridItem(.flexible(), spacing: 5), GridItem(.flexible(), spacing: 5), GridItem(.flexible(), spacing: 5)]
+    
     let coins: [CoinData] = [
         CoinData(rank: 1, name: "Solana", market: "LTC", price: "$0.4175", change: "+21.18%", iconName: "Solana"),
-        CoinData(rank: 1, name: "Solana", market: "LTC", price: "$0.4175", change: "+21.18%", iconName: "Solana"),
-        CoinData(rank: 1, name: "Solana", market: "LTC", price: "$0.4175", change: "+21.18%", iconName: "Solana")
+        CoinData(rank: 2, name: "Solana", market: "LTC", price: "$0.4175", change: "+21.18%", iconName: "Solana"),
+        CoinData(rank: 3, name: "Solana", market: "LTC", price: "$0.4175", change: "+21.18%", iconName: "Solana"),
+        CoinData(rank: 4, name: "Solana", market: "LTC", price: "$0.4175", change: "+21.18%", iconName: "Solana"),
+        CoinData(rank: 5, name: "Solana", market: "LTC", price: "$0.4175", change: "+21.18%", iconName: "Solana"),
+        CoinData(rank: 6, name: "Solana", market: "LTC", price: "$0.4175", change: "+21.18%", iconName: "Solana"),
+        CoinData(rank: 7, name: "Solana", market: "LTC", price: "$0.4175", change: "+21.18%", iconName: "Solana")
     ]
     
     var body: some View {
-        List(coins) { coin in
-            HStack {
-                Text("\(coin.rank)")
-                    .font(.subheadline)
-                
-                Image(systemName: "bitcoinsign.arrow.circlepath")
-                    .resizable()
-                    .frame(width: 30, height: 30)
-                
-                VStack(alignment: .leading) {
-                    Text(coin.name)
-                        .bold()
-                    Text(coin.market)
-                        .foregroundStyle(.gray)
-                        .font(.caption)
+            ScrollView(.horizontal) {
+                LazyHGrid(rows: rows, spacing: 10) {
+                    ForEach(coins) { coin in
+                        CoinCardView(coin: coin)
+                            .frame(width: UIScreen.main.bounds.width * 0.8)
+                    }
                 }
-                Spacer()
-                
+                .padding()
             }
+    }
+}
+struct CoinCardView: View {
+    let coin: CoinData
+    
+    var body: some View {
+        HStack(spacing: 10) {
+            Text("\(coin.rank)")
+                .foregroundStyle(.secondary)
+            
+            Image(systemName: "bitcoinsign.circle.fill")
+                .resizable()
+                .frame(width: 20, height: 20)
+            
+            VStack(alignment: .leading, spacing: 5){
+                Text(coin.name)
+                    .font(.subheadline)
+                Text(coin.market)
+            }
+            
+            Spacer()
+            
+            VStack{
+                Text(coin.price)
+                Text(coin.change)
+            }
+            
         }
     }
 }

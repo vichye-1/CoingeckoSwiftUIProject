@@ -25,6 +25,8 @@ struct CoinTrendingView: View {
                 
                 sectionTitle("Top15 Coin")
                 
+                
+                
                 sectionTitle("Top7 NFT")
             }
         }
